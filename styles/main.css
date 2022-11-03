@@ -1,0 +1,64 @@
+nav {
+  background-color: bisque;
+}
+
+header {
+  background-color: DarkTurquoise;
+}
+
+main {
+  background-color: LightGreen;
+  min-height: 70vh;
+}
+aside {
+  background-color: RosyBrown;
+}
+footer {
+  background-color: HotPink;
+}
+
+/* Mobile first */
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: SlateGrey;
+  padding: 10px;
+  min-width: 320px;
+}
+
+.grid-container > * {
+  padding: 10px;
+  font-family: monospace;
+  font-size: 2rem;
+}
+
+@media (min-width: 600px) {
+  nav {
+    grid-area: nav;
+  }
+  header {
+    grid-area: header;
+  }
+  main {
+    grid-area: main;
+
+    gap: 10px;
+  }
+
+  aside {
+    grid-area: aside;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      'nav nav nav'
+      'header header header'
+      'aside main main'
+      'aside main main'
+      'footer footer footer';
+  }
+}
